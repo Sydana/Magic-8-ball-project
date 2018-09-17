@@ -7,9 +7,13 @@ public class Magic_8_ball_project {
         //declare
         Scanner keyboard;
         int testing;
-        String question;
         String name;
         String pet;
+        int birthdayThing;
+        String weirdObject;
+        String question;
+        int total;
+
 
 
         //initialization
@@ -20,7 +24,18 @@ public class Magic_8_ball_project {
         name = keyboard.nextLine();
         System.out.println("Hello "+name+". Next, tell me if you have any pets, and if you do, what's their name.");
         pet = keyboard.nextLine();
+        System.out.println("Okay, that's cool. Now, take all the numbers of your birthday, and add them all up, what do you get?");
+        birthdayThing = keyboard.nextInt();
+        keyboard.nextLine();
+        System.out.println("Alright, final question. What is the weirdest thing you have have ever seen in the store?");
+        weirdObject = keyboard.nextLine();
+        System.out.println("Really? That is weird. Okay now, ask me your question.");
+        question = keyboard.nextLine();
+        System.out.println("Okay, your fortune is....");
 
+            if(birthdayThing<10){
+                System.out.println("Oof, your future is not looking bright.");
+            };
 
 
 
