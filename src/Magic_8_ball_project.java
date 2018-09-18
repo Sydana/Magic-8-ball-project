@@ -33,16 +33,36 @@ public class Magic_8_ball_project {
         question = keyboard.nextLine();
         System.out.println("Okay, your fortune is....");
 
-            if(birthdayThing<10){
+            if(birthdayThing*2>10){
                 System.out.println("Oof, your future is not looking bright.");
-            };
-
-
-
-
-
-
-
+            }
+            if(birthdayThing*2>20){
+                System.out.println("Well, I could say that your outlook isn't looking BAD.");
+            }
+            if(birthdayThing*2>30){
+                System.out.println("Oh. Uh. best you not do what you're thinking about doing. Yeah.");
+            }
+            if(birthdayThing*2>40){
+                System.out.println("You're doing great. keep going.");
+            }
+            if(birthdayThing*2>50){
+                System.out.println("Oh no, stop. Just. Stop right there.");
+            }
+            if(birthdayThing*2>60){
+                System.out.println("Sure. You could do that, I suppose.");
+            }
+            if(birthdayThing*2>70){
+                System.out.println("No.");
+            }
+            if(birthdayThing*2>80){
+                System.out.println("Yeah! Go for it!");
+            }
+            if(birthdayThing*2>90){
+                System.out.println("Oho, no you don't.");
+            }
+            if(birthdayThing*2>100){
+                System.out.println("Do it. I dare you.");
+               }
 
     }
 }
