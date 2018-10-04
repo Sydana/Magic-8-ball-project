@@ -2,67 +2,68 @@ import java.util.Scanner;
 
 public class Magic_8_ball_project {
 
-    public static void main(String[]args){
+    public static void main(String[] args) {
         //10 choices with 1-100 using boolean
         //declare
         Scanner keyboard;
-        int testing;
+        int pickedNumber;
         String name;
-        String pet;
-        int birthdayThing;
-        String weirdObject;
+        String correct;
         String question;
+
         int total;
-
-
-
+        String confirmation;
+        pickedNumber = (int) (Math.random() * 100);
+        boolean value = true;
         //initialization
         keyboard = new Scanner(System.in);
 
-
-        System.out.println("Hello, I am the magic eight ball. I am going to ask you some questions. First, tell me your name.");
+        System.out.println(pickedNumber);
+        System.out.println("Hello, I am the magic eight ball. First things first, who are you?");
         name = keyboard.nextLine();
-        System.out.println("Hello "+name+". Next, tell me if you have any pets, and if you do, what's their name.");
-        pet = keyboard.nextLine();
-        System.out.println("Okay, that's cool. Now, take all the numbers of your birthday, and add them all up, what do you get?");
-        birthdayThing = keyboard.nextInt();
-        keyboard.nextLine();
-        System.out.println("Alright, final question. What is the weirdest thing you have have ever seen in the store?");
-        weirdObject = keyboard.nextLine();
-        System.out.println("Really? That is weird. Okay now, ask me your question.");
-        question = keyboard.nextLine();
-        System.out.println("Okay, your fortune is....");
+        System.out.println("Hello " + name + ". I am guessing you are here for my absolutely amazing advice and wisdom, correct?");
+        correct = keyboard.nextLine();
+        System.out.println("Well whatever, we are here for you, not me.");
+        System.out.println("Ask A Question, Any Question-\nFor the Magic Eight Ball Knows All.");
 
-            if(birthdayThing*2>10){
+        while (value) {
+
+            question = keyboard.nextLine();
+            System.out.println(question);
+            System.out.println("Okay, your fortune is....");
+            pickedNumber = (int) (Math.random() * 100);
+
+            if (pickedNumber < 10) {
                 System.out.println("Oof, your future is not looking bright.");
-            }
-            if(birthdayThing*2>20){
+            } else if (pickedNumber < 20) {
                 System.out.println("Well, I could say that your outlook isn't looking BAD.");
-            }
-            if(birthdayThing*2>30){
-                System.out.println("Oh. Uh. best you not do what you're thinking about doing. Yeah.");
-            }
-            if(birthdayThing*2>40){
-                System.out.println("You're doing great. keep going.");
-            }
-            if(birthdayThing*2>50){
+            } else if (pickedNumber < 30) {
+                System.out.println("Oh. Uh. Best you not do what you're thinking about doing. Yeah.");
+            } else if (pickedNumber < 40) {
+                System.out.println("You're doing great. Keep going.");
+            } else if (pickedNumber < 50) {
                 System.out.println("Oh no, stop. Just. Stop right there.");
-            }
-            if(birthdayThing*2>60){
+            } else if (pickedNumber < 60) {
                 System.out.println("Sure. You could do that, I suppose.");
-            }
-            if(birthdayThing*2>70){
+            } else if (pickedNumber < 70) {
                 System.out.println("No.");
-            }
-            if(birthdayThing*2>80){
+            } else if (pickedNumber < 80) {
                 System.out.println("Yeah! Go for it!");
-            }
-            if(birthdayThing*2>90){
+            } else if (pickedNumber < 90) {
                 System.out.println("Oho, no you don't.");
-            }
-            if(birthdayThing*2>100){
+            } else if (pickedNumber < 100) {
                 System.out.println("Do it. I dare you.");
-               }
+            }
+            System.out.println("You do want to ask another question? (yes or no).");
+            confirmation= keyboard.nextLine();
+            if(confirmation.equals("yes")){
 
+                System.out.println("Ask A Question, Any Question-\nFor the Magic Eight Ball Knows All.");
+            }
+            else if(confirmation.equals("no")){
+                System.out.println("Boo you loser.");
+                break;
+            }
+        }
     }
 }
